@@ -6,7 +6,7 @@ let primerResultado = null;
 let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
-
+let musica = new Audio('Calla mora.mp3');
 //Apuntando a Documento HTML
 let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
@@ -49,6 +49,12 @@ function Destapar(id){
             //Aumentar Aciertos
             aciertos++;
             mostrarAciertos.innerHTML = `Aciertos:${aciertos}`;
+
+            if(aciertos == 8){
+                mostrarAciertos.innerHTML = 'SILENCIO MORA';
+                mostrarMovimientos.innerHTML = `XDDDDDDDDDDDDDDDD`;
+                musica.play();
+            }
         }else{
             //mostrar momentaneamente valores y volver a tapar
             setTimeout(()=>{
