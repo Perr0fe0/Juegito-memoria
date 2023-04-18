@@ -7,7 +7,7 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 10;
+let timer = 30;
 let tiempoReg = null;
 // let musica = new Audio('Calla mora.mp3');
 //Apuntando a Documento HTML
