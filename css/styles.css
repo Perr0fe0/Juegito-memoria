@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+    background: rgb(56,1,49);
+    background: linear-gradient(0deg, rgba(56,1,49,1) 20%, rgba(246,138,177,1) 100%);
+    background-repeat: no-repeat;
+    font-family:sans-serif;
+    color: aliceblue;
+  }
+  h1{
+    text-align: center;
+  }
+  main{
+    
+    margin: 3rem auto;
+    
+  }
+  @media (min-width: 758px) {
+      main{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+      }
+  }
+
+  .seccion1{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+  @media (min-width: 758px) {
+      .seccion1{
+        border-radius: 1rem;
+      }
+  }
+
+  table{
+    width: 100%;
+    
+  }
+
+  button{
+    width: 100%;
+    height: 10rem;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  button:hover{
+    cursor: pointer;
+    transition: 1s;
+  }
+  @media (min-width: 758px) {
+      button{
+        width: 10rem;
+      }
+  }
+
+  .seccion2{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  @media (min-width: 758px) {
+      .seccion2{
+        width: 25rem;
+        height: 40rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+  }
+
+  .estadisticas{
+    border: .1rem solid white;
+    height: 10.5rem;
+    border-radius: 1rem;
+    padding: .8rem 2rem;
+  }
+
+  footer{
+    text-align: center;
+  }
+  
