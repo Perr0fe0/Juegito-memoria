@@ -8,6 +8,7 @@ let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
 let timer = 30;
+let timerInicial = timer;
 let tiempoReg = null;
 // let musica = new Audio('Calla mora.mp3');
 //Apuntando a Documento HTML
@@ -81,8 +82,10 @@ function Destapar(id){
             mostrarAciertos.innerHTML = `Aciertos:${aciertos}`;
 
             if(aciertos == 8){
-                mostrarAciertos.innerHTML = `Aciertos:${aciertos} <hr> Has Ganado!!`;
-                
+                clearInterval(tiempoReg);
+                mostrarAciertos.innerHTML = `Aciertos:${aciertos} <hr> 🎉Has Ganado!!🎉`;
+                mostrarMovimientos.innerHTML = `Has hecho un total de ${movimientos} movimientos en esta partida! 😎`;
+                mostrarTiempo.innerHTML = `Has demorado ${timerInicial - timer} segundos! ⏱️`;
             }
         }else{
             //mostrar momentaneamente valores y volver a tapar
@@ -92,7 +95,7 @@ function Destapar(id){
                 tarjeta1.disabled = false;
                 tarjeta2.disabled = false;
                 tarjetasDestapadas = 0;
-            },1000);
+            },800);
         }
         
     }
