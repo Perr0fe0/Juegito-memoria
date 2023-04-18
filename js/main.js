@@ -6,10 +6,14 @@ let primerResultado = null;
 let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
-let musica = new Audio('Calla mora.mp3');
+let temporizador = false;
+let timer = 10;
+let tiempoReg = null;
+// let musica = new Audio('Calla mora.mp3');
 //Apuntando a Documento HTML
 let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
+let mostrarTiempo = document.getElementById('t-restante');
 
 //Generacion de Numeros Aleatorios
 let numeros = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
@@ -17,8 +21,34 @@ numeros = numeros.sort(()=>{return Math.random() - 0.5});
 console.log(numeros);
 
 //Funcion Principal
+function contarTiempo(){
 
+    tiempoReg = setInterval(() => {
+        timer--;
+        mostrarTiempo.innerHTML = `Tiempo: ${timer}`;
+        if(timer == 0){
+            clearInterval(tiempoReg);
+            bloquearTarjetas();
+            mostrarTiempo.innerHTML = `Tiempo: ${timer}<hr> JAJA PERDISTE POR TIEMPO XDDDDD`;
+        }
+        
+    }, 1000);
+    
+    
+};
+function bloquearTarjetas(){
+    for(let i = 0; i<=15; i++){
+        let tarjetaBloquedada = document.getElementById(i);
+        tarjetaBloquedada.innerHTML = 'Q NUB';
+        tarjetaBloquedada.disabled = true;
+    }
+}
 function Destapar(id){
+
+    if(temporizador == false){
+        contarTiempo();
+        temporizador = true;
+    }
     tarjetasDestapadas++;
     
     if(tarjetasDestapadas == 1){
@@ -51,9 +81,8 @@ function Destapar(id){
             mostrarAciertos.innerHTML = `Aciertos:${aciertos}`;
 
             if(aciertos == 8){
-                mostrarAciertos.innerHTML = 'SILENCIO MORA';
-                mostrarMovimientos.innerHTML = `XDDDDDDDDDDDDDDDD`;
-                musica.play();
+                mostrarAciertos.innerHTML = `Aciertos:${aciertos} <hr> Has Ganado!!`;
+                
             }
         }else{
             //mostrar momentaneamente valores y volver a tapar
