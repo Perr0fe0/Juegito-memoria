@@ -48,20 +48,35 @@ html {
   }
 
   button{
-    width: 11rem;
+    width: 9rem;
+   
     height: 10rem;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
+    text-align: center;
   }
   button:hover{
     cursor: pointer;
     transition: 1s;
   }
+  /*Desktop*/
   @media (min-width: 758px) {
       button{
         width: 10rem;
       }
+  }
+  /*360px*/
+  @media (min-width:360px ) {
+      button{
+        width: 7.5rem;
+      }
+  }
+  /*384px*/
+  @media (min-width:384px ) {
+    button{
+      width: 8rem;
+    }
   }
   hr{
     border: none;
