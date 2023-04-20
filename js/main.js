@@ -7,7 +7,7 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 3;
+let timer = 30;
 let timerInicial = timer;
 let tiempoReg = null;
 
