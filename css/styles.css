@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'Minecraft ';
+  src: url('/font/MinecraftBold-nMK1.otf');
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face{
+  font-family: 'Minecraft';
+  src: url('/font/MinecraftBoldItalic-1y1e.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face{
+  font-family: 'Minecraft';
+  src: url('/font/MinecraftItalic-R8Mo.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face{
+  font-family: 'Minecraft';
+  src: url('/font/MinecraftRegular-Bmg3.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -10,7 +35,7 @@ html {
     background: rgb(56,1,49);
     background: linear-gradient(0deg, rgba(56,1,49,1) 20%, rgba(246,138,177,1) 100%);
     background-repeat: no-repeat;
-    font-family:sans-serif;
+    font-family:'Minecraft';
     color: aliceblue;
   }
   h1{
@@ -33,14 +58,9 @@ html {
   .seccion1{
     background-color: rgba(255, 255, 255, 0.2);
     padding: 1rem;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+    
   }
-  @media (min-width: 758px) {
-      .seccion1{
-        border-radius: 1rem;
-      }
-  }
+  
 
   table{
     width: 100%;
@@ -49,16 +69,17 @@ html {
 
   button{
     width: 9rem;
-   
+    font-family: 'Minecraft';
     height: 10rem;
     color: white;
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
+    border-radius: 0;
   }
   button:hover{
     cursor: pointer;
-    transition: 1s;
+    
   }
   /*Desktop*/
   @media (min-width: 758px) {
@@ -84,23 +105,20 @@ html {
   .seccion2{
     background-color: rgba(255, 255, 255, 0.2);
     padding: 2rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    
   }
 
   @media (min-width: 758px) {
       .seccion2{
         width: 25rem;
         height: 40rem;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        
       }
   }
 
   .estadisticas{
     border: .1rem solid white;
     height: 10.5rem;
-    border-radius: 1rem;
     padding: .8rem 2rem;
   }
 
